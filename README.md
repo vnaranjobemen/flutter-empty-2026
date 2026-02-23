@@ -89,24 +89,25 @@ Opcionalment, pots afegir `&` al final de la comanda per executar-la en segon pl
 - Serveix per indicar a Flutter en quin dispositiu/target vols executar l’app.
 - Exemples: `chrome`, `android`, `ios`, `windows`, `macos`, `linux` (segons les plataformes que tinguis disponibles al teu entorn).
 
+### Chrome
+
 Executa al navegador Chrome:
 
 ```bash
 flutter run -d chrome
 ```
 
-Executa en dispositiu/emulador Android:
+L’opció `chrome` es pot executar directament per desenvolupament i proves.
+Si vols desplegar la versió web en un servidor, has de generar el build amb `flutter build web` i publicar el contingut de `build/web`.
 
-```bash
-flutter run -d android
-```
+### Android
 
 Arrenca un emulador Android per línia de comandes (CLI):
 
 ```bash
-flutter emulators
+flutter emulators # Per veure tots els emuladors disponibles
 flutter emulators --launch <emulator_id>
-flutter devices
+flutter devices # Per veure tots els dispositius iniciats
 flutter run -d <device_id>
 ```
 
@@ -116,9 +117,6 @@ Exemple:
 flutter emulators --launch Pixel_6_API_34
 flutter run -d emulator-5554
 ```
-
-L’opció `chrome` es pot executar directament per desenvolupament i proves.
-Si vols desplegar la versió web en un servidor, has de generar el build amb `flutter build web` i publicar el contingut de `build/web`.
 
 ## 6) Comportament esperat de Git
 

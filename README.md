@@ -78,9 +78,18 @@ Android App Bundle opcional (Play Store):
 flutter build appbundle
 ```
 
-## 5) Comandes d’execució (opcional)
+## 5) Comandes d’execució (segons dispositiu)
 
-Executa al navegador:
+Fes `flutter run -d <dispositiu>` per executar l’aplicació en un dispositiu concret.
+
+Opcionalment, pots afegir `&` al final de la comanda per executar-la en segon pla.
+
+- `-d` és el mateix que `--device-id`.
+- `&` executa la comanda en segon pla (el `run` bloqueja la terminal si no l’afegeixes).
+- Serveix per indicar a Flutter en quin dispositiu/target vols executar l’app.
+- Exemples: `chrome`, `android`, `ios`, `windows`, `macos`, `linux` (segons les plataformes que tinguis disponibles al teu entorn).
+
+Executa al navegador Chrome:
 
 ```bash
 flutter run -d chrome
@@ -91,6 +100,25 @@ Executa en dispositiu/emulador Android:
 ```bash
 flutter run -d android
 ```
+
+Arrenca un emulador Android per línia de comandes (CLI):
+
+```bash
+flutter emulators
+flutter emulators --launch <emulator_id>
+flutter devices
+flutter run -d <device_id>
+```
+
+Exemple:
+
+```bash
+flutter emulators --launch Pixel_6_API_34
+flutter run -d emulator-5554
+```
+
+L’opció `chrome` es pot executar directament per desenvolupament i proves.
+Si vols desplegar la versió web en un servidor, has de generar el build amb `flutter build web` i publicar el contingut de `build/web`.
 
 ## 6) Comportament esperat de Git
 
